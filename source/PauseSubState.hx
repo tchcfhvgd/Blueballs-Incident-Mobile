@@ -1,6 +1,8 @@
 package;
 
+#if desktop
 import llua.Lua;
+#end
 import Controls.Control;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -30,9 +32,6 @@ class PauseSubState extends MusicBeatSubstate
 	{
 		super();
 
-		
-		
-
 		var bg:FlxSprite = new FlxSprite();
 		bg.frames = Paths.getSparrowAtlas('frames/sheeto3');
 		bg.animation.addByPrefix('n', 'n', 24);
@@ -42,8 +41,6 @@ class PauseSubState extends MusicBeatSubstate
 		bg.scrollFactor.set();
 		bg.screenCenter();
 		add(bg);
-
-		
 
 		var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
 		
@@ -152,8 +149,6 @@ class PauseSubState extends MusicBeatSubstate
 
 	override function destroy()
 	{
-	
-
 		super.destroy();
 	}
 
