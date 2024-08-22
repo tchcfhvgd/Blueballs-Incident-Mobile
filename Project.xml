@@ -136,6 +136,8 @@
 
 	<!-- _________________________________ Custom _______________________________ -->
 
+	<haxedef name="no-deprecation-warnings"/>
+	
 	<certificate path="key.keystore" password="psychengine" alias="psychport" alias-password="psychengine" if="android" unless="debug" />
 		
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
