@@ -77,7 +77,7 @@ class Main extends Sprite
 
 	private function setupGame():Void
 	{
-		game = new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen);
+		game = new FlxGame(gameWidth, gameHeight, initialState, framerate, framerate, skipSplash, startFullscreen);
 
 		addChild(game);
 
@@ -118,7 +118,7 @@ class Main extends Sprite
 
 	public function getFPSCap():Float
 	{
-		return openfl.Lib.current.stage.frameRate;
+		return;
 	}
 
 	public function getFPS():Float
