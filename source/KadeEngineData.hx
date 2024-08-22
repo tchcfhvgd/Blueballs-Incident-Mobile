@@ -1,5 +1,6 @@
 import openfl.Lib;
 import flixel.FlxG;
+import flixel.math.FlxMath;
 
 class KadeEngineData
 {
@@ -36,12 +37,25 @@ class KadeEngineData
 		if (FlxG.save.data.fpsRain == null)
 			FlxG.save.data.fpsRain = false;
 
-		if (FlxG.save.data.fpsCap == null)
-			FlxG.save.data.fpsCap = 120;
+		if (FlxG.save.data.framerate == null)
+			FlxG.save.data.framerate = 60;
 
-		if (FlxG.save.data.fpsCap > 285 || FlxG.save.data.fpsCap < 60)
-			FlxG.save.data.fpsCap = 120; // baby proof so you can't hard lock ur copy of kade engine
-		
+		if(FlxG.save.data.framerate != null) {
+			final refreshRate:Int = FlxG.stage.application.window.displayMode.refreshRate;
+			FlxG.save.data.framerate = Std.int(FlxMath.bound(refreshRate, 60, 240));
+		}
+
+	        if(FlxG.save.data.framerate > FlxG.drawFramerate)
+		{
+			FlxG.updateFramerate = FlxG.save.data.framerate;
+			FlxG.drawFramerate = FlxG.save.data.framerate;
+		}
+		else
+		{
+			FlxG.drawFramerate = FlxG.save.data.framerate;
+			FlxG.updateFramerate = FlxG.save.data.framerate;
+		}
+	    
 		if (FlxG.save.data.scrollSpeed == null)
 			FlxG.save.data.scrollSpeed = 1;
 
