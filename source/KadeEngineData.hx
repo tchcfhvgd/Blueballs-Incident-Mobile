@@ -94,7 +94,5 @@ class KadeEngineData
 		KeyBinds.keyCheck();
 
 		Main.watermarks = FlxG.save.data.watermark;
-
-		(cast (Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
 	}
 }
