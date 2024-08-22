@@ -32,7 +32,7 @@ class Character extends FlxSprite
 		{
 			case 'gfG':
 				// GIRLFRIEND CODE
-				tex = CachedFrames.cachedInstance.fromSparrow('gfG','characters/new_girlfriendG');
+				tex = Paths.getSparrowAtlas('gfG','characters/new_girlfriendG');
 				frames = tex;
 				animation.addByPrefix('singUP', 'GF Up Note', 48, false);
 				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
@@ -50,7 +50,7 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 			case 'gf2':
 				// GIRLFRIEND CODE
-				tex = CachedFrames.cachedInstance.fromSparrow('gf2','characters/new_girlfriend2');
+				tex = Paths.getSparrowAtlas('gf2','characters/new_girlfriend2');
 				frames = tex;
 				animation.addByPrefix('singUP', 'GF Up Note', 48, false);
 				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
@@ -152,7 +152,7 @@ class Character extends FlxSprite
 
 				flipX = true;
 			case 'bfG':
-				var tex = CachedFrames.cachedInstance.fromSparrow('bfG','characters/new_boyfriendG');
+				var tex = Paths.getSparrowAtlas('bfG','characters/new_boyfriendG');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
@@ -188,7 +188,7 @@ class Character extends FlxSprite
 	
 				flipX = true;
 			case 'bfblue':
-				var tex = CachedFrames.cachedInstance.fromSparrow('bfblue','characters/new_blue_boyfriend');
+				var tex = Paths.getSparrowAtlas('bfblue','characters/new_blue_boyfriend');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
@@ -256,7 +256,7 @@ class Character extends FlxSprite
 			}
 			case 'troll3':
 			{
-				tex = CachedFrames.cachedInstance.fromSparrow('troll3', 'characters/SadSheet3');
+				tex = Paths.getSparrowAtlas('troll3', 'characters/SadSheet3');
 				frames = tex;
 				animation.addByPrefix('idle',"TrollfaceIdle", 6, false);
 				animation.addByPrefix('singUP',"TrollfaceUp", 24, false);
@@ -374,7 +374,7 @@ class Character extends FlxSprite
 				/////////////////////////////////////////////////////
 			case 'trollge1':
 				// DAD ANIMATION LOADING CODE
-				tex = CachedFrames.cachedInstance.fromSparrow('trollge1', 'characters/trollgeStatic1');
+				tex = Paths.getSparrowAtlas('trollge1', 'characters/trollgeStatic1');
 				frames = tex;
 				animation.addByPrefix('idle',"TrollgeIdle", 12, false);
 				animation.addByPrefix('singUP',"TrollgeUp", 24, false);
@@ -392,7 +392,7 @@ class Character extends FlxSprite
 				/////////////////////////////////////////////////////
 			case 'trollge2':
 				// DAD ANIMATION LOADING CODE
-				tex = CachedFrames.cachedInstance.fromSparrow('trollge2', 'characters/trollgeStatic2');
+				tex = Paths.getSparrowAtlas('trollge2', 'characters/trollgeStatic2');
 				frames = tex;
 				animation.addByPrefix('idle',"TrollgeIdle", 12, false);
 				animation.addByPrefix('singUP',"TrollgeUp", 24, false);
@@ -410,7 +410,7 @@ class Character extends FlxSprite
 				/////////////////////////////////////////////////////
 			case 'trollge4':
 				// DAD ANIMATION LOADING CODE
-				tex = CachedFrames.cachedInstance.fromSparrow('trollge4', 'characters/trollgeStatic4');
+				tex = Paths.getSparrowAtlas('trollge4', 'characters/trollgeStatic4');
 				frames = tex;
 				animation.addByPrefix('idle',"TrollgeIdle", 12, false);
 				animation.addByPrefix('singUP',"TrollgeUp", 24, false);
@@ -428,7 +428,7 @@ class Character extends FlxSprite
 				/////////////////////////////////////////////////////
 			case 'trollgeglitch':
 				// DAD ANIMATION LOADING CODE
-				tex = CachedFrames.cachedInstance.fromSparrow('trollgeglitch', 'characters/trollgeGlitch');
+				tex = Paths.getSparrowAtlas('trollgeglitch', 'characters/trollgeGlitch');
 				frames = tex;
 				animation.addByPrefix('idle',"TrollgeIdle", 12, false);
 				animation.addByPrefix('singUP',"TrollgeUp", 24, false);
@@ -446,7 +446,7 @@ class Character extends FlxSprite
 					/////////////////////////////////////////////////////
 			case 'trollgeglitch2':
 				
-				tex = CachedFrames.cachedInstance.fromSparrow('trollgeglitch2', 'characters/TrollgeFinal');
+				tex = Paths.getSparrowAtlas('trollgeglitch2', 'characters/TrollgeFinal');
 				frames = tex;
 				animation.addByPrefix('idle',"TrollgeIdle", 24, false);
 				animation.addByPrefix('singUP',"TrollgeUp", 24, false);
