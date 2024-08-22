@@ -132,8 +132,6 @@ class TitleState extends MusicBeatState
 			if (!StoryMenuState.weekUnlocked[0])
 				StoryMenuState.weekUnlocked[0] = true;
 		}
-
-		CachedFrames.loadEverything();
 	}
 
 	var logoBl:FlxSprite;
@@ -290,11 +288,7 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (!CachedFrames.cachedInstance.loaded)
-		{
-			loadingImage.alpha = CachedFrames.cachedInstance.progress / 100;
-		}
-		else if (!once)
+		if (!once)
 		{
 			once = true;
 			remove(loadTxt);
